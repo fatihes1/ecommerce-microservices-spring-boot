@@ -2,10 +2,15 @@ package com.fatichdev.ecommerce.category;
 
 import com.fatichdev.ecommerce.product.Product;
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
-import lombok.*;
-import org.springframework.data.annotation.Id;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.List;
 
@@ -14,6 +19,7 @@ import java.util.List;
 @Builder
 @Getter
 @Setter
+@Entity
 public class Category {
 
     @Id
@@ -21,7 +27,6 @@ public class Category {
     private Integer id;
     private String name;
     private String description;
-
     @OneToMany(mappedBy = "category", cascade = CascadeType.REMOVE)
     private List<Product> products;
 }
