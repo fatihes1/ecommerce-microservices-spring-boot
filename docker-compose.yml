@@ -91,6 +91,27 @@ services:
       - 1080:1080
       - 1025:1025
 
+  zipkin:
+    container_name: zipkin
+    image: openzipkin/zipkin
+    ports:
+      - 9411:9411
+    networks:
+      - microservices-network
+
+  keycloak:
+    container_name: ms-keycloak
+    image: quay.io/keycloak/keycloak:24.0.2
+    ports:
+      - 9098:8080
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    networks:
+      - microservices-network
+    command:
+      - "start-dev"
+
 networks:
   microservices-network:
     driver: bridge
