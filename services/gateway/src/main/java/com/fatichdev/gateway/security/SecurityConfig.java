@@ -1,3 +1,4 @@
+/*
 package com.fatichdev.gateway.security;
 
 import org.springframework.context.annotation.Bean;
@@ -25,3 +26,4 @@ public class SecurityConfig {
         return serverHttpSecurity.build();
     }
 }
+*/
