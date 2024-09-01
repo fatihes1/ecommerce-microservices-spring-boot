@@ -4,7 +4,7 @@
 
 <div align="center">
 
-![dOdswtj.md.png](https://iili.io/dOdswtj.md.png)
+![schema.png](assets/schema.png)
 
 </div>
 
@@ -17,7 +17,7 @@ This project implements a microservices-based e-commerce platform using Spring B
 
 <div align="center">
 
-![dOJeWJV.md.png](https://iili.io/dOJeWJV.md.png)
+![ddd.png](assets/ddd.png)
 
 </div>
 
